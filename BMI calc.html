@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kiloweight Converter</title>
+<style>
+body {
+text-align: center; 
+background: lightsteelblue; 
+font-family: "Courier New", Courier, monospace;
+color: white;
+}
+input {
+margin: auto;  width: 300px;  padding: 10px; font-family: "Courier New", Courier, monospace;  font-size: 15px;
+}
+.title {
+margin: 20px;  padding: 20px; font-family: "Poppins", sans-serif; color: lightgrey
+}
+.results {
+margin: auto;  width: 30%;  padding: 20px;
+}
+.box {
+  margin: auto;
+  width: 30%;
+  background: rgb(53, 48, 48);
+}
+.box1 {
+  margin-left: -72.5%;
+  width: 300px;
+background: lightseagreen;
+border-radius: 10px;
+}
+.box2 {
+  width: 300px;
+background: lightslategray;
+margin: 20px -72.5%;
+border-radius: 10px;
+}
+.box3 {
+  width: 300px;
+background: lightslategrey;
+margin: 20px -72.5%;
+border-radius: 10px;
+}
+.box4 {
+  margin-left: -72.5%;
+  width: 300px;
+background: lightsteelblue;
+border-radius: 10px;
+}
+.units,
+#pounds-result,
+#ounces-result,
+#grams-result,
+#stones-result {
+display: inline-block;
+}
+
+input,
+.box
+.box1
+.box2
+.box3
+.box4
+
+#result {
+border-radius: 5px;
+}
+</style>
+    </head>
+    <body>    
+      <div class="box"> 
+<h1 class="title">KILOGRAMS CONVERTER</h1>
+<label>kg</label>
+
+<input
+type="number"
+placeholder="Masukkan angka"
+oninput="kiloweightConvert(this.value)"/> 
+
+<div class="results">
+<div class="box1"> 
+<h3 class="units">Pounds:</h3>
+<div id="Pounds"
+style="display: inline"></div>
+</div>
+<div class="box2">
+<h3 class="units">Ounces:</h3>
+<div id="Ounces"
+style="display: inline"></div>
+</div>
+<div class="box3">
+<h3 class="units">Grams:</h3>
+<div id="Grams"
+style="display: inline"></div>
+</div>
+<div class="box4">
+<h3 class="units">Stones:</h3>
+<div id="Stones"
+style="display: inline"></div>
+</div>
+</div>
+
+    <script> 
+            function kiloweightConvert(value) {
+                document.getElementById("Pounds").innerHTML =
+                  value * 2.2046;
+                document.getElementById("Ounces").innerHTML =
+                  value * 35.274;
+                document.getElementById("Grams").innerHTML =
+                  value * 1000;
+                document.getElementById("Stones").innerHTML =
+                  value * 0.1574;
+            }
+    </script>
+    </body>
+</html>
